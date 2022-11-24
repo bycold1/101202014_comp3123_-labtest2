@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: row;
+  height: 100vh;;
+}
+
+.leftContent{
+  flex:2;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/De_Madrid_al_cielo_260.jpg/640px-De_Madrid_al_cielo_260.jpg);
+  background-size: cover;
+  position: relative;
+  padding: 25px;
+  padding-left: 50px;
+  z-index: 0;
+}
+.leftContent::after{
+  content: '';
+  background-color: rgba(0,0,0,0.75);
+  position: absolute;
+  top:0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+}
+.leftContent h4{
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.leftContent .information{
+  color: white;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 25px;
+}
+.leftContent.information .celcius h1{
+  font-size: 75px;
+  margin: 0px;
+  padding: 0px;
+}
+.leftContent .information .city{
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.rightContent{
+  flex: 1;
+  background-color: white;
+}
+.search-bar{
+  border: 2px solid black;
+  position:absolute;
+  left:20%;
+  top:25%;
+  width:40%;
+  height: 2%;
+  background-color:white;
+  color:grey;
+
+
+
+  
+}
+.rightContent .details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.rightContent .details h3{
+  margin-bottom: 25px;
+  width: 100%;
+  padding-left: 50px;
+}
+.rightContent .details .detailItem{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 10px;
+}
+.rightContent .details .detailItem .left{
+  width: 50%;
+  padding-left: 25px;
+}
+.rightContent .details .detailItem .right{
+  width: 50%;
+  padding-right: 25px;
+  text-align: right;
 }
