@@ -76,10 +76,18 @@ return (
               </div>
               <div className="detailItem">
                 <div className="left">
-                <span>Wind:</span>  <span className="right">{data.wind.speed} Km/h</span>
+                <span>Wind:       </span><span className="right">{data.wind.speed}</span>km/h
               </div>
+     
            
               </div>
+              <div className="detailItem">
+                <div className="left">
+                <span>Feels like:   </span>  <span className="right">{(data.main.feels_like - 273.15).toFixed(1)}
+                <sup>&#176;</sup></span>
+                </div>
+                </div>
+              
             </div>
           </div>
         </>
